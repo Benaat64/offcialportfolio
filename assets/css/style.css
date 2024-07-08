@@ -785,9 +785,7 @@
       .container{
         max-height: 100vh;
       }
-      .skills__img{
-        width: 30px;    
-      }
+
       .portfolio-item{
         flex: 0 0 50%;
         max-width: 50%;
@@ -809,8 +807,17 @@
         width: 96vw;
         padding: 1rem;
       }
+
+    }
+    @media only screen and (max-width:400px)
+    {
+      .skills__img{
+        width: 40px;    
+      }
     }
     @media only screen and (max-width:320px)
     {
-      
+      .skills__img{
+        width: 40px;    
+      }
     }
