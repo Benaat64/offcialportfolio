@@ -88,6 +88,7 @@ const filterContainer= document.querySelector('.portfolio-filter-inner'),
 /*=============== THEME/DISPLAY CUSTOMIZATION ===============*/
 const theme = document.querySelector("#theme-button");
 const themeModal = document.querySelector(".customize-theme");
+const fontSizes = document.querySelectorAll('.choose-size span')
 const colorPalette = document.querySelectorAll(".choose-color span");
 const root = document.querySelector(":root");
 const bg1 = document.querySelector('.bg-1');
@@ -107,7 +108,31 @@ const closeModal = (e) => {
 theme.addEventListener("click",openThemeModal)
 themeModal.addEventListener("click",closeModal)
 /*===== FONTS =====*/
+const removeSizeSelector = () => {
+    fontSizes.forEach(size => {
+        size.classList.remove("active")
+    })
+}
+fontSizes.forEach(size => {
+    size.addEventListener('click', () => {
 
+        removeSizeSelector();
+        let fontSize;
+        size.classList.toggle('active');
+        if(size.classList.contains('font-size-1')){
+            fontSize = '12px'
+        }
+        else if(size.classList.contains('font-size-2')){
+            fontSize = '14px'
+        }else if(size.classList.contains('font-size-3')){
+            fontSize = '16px'
+        }else if(size.classList.contains('font-size-4')){
+            fontSize = '18px'
+        }
+        // change font size of the root html element
+        document.querySelector('html').style.fontSize = fontSize
+    })
+})
 /*===== PRIMARY COLORS =====*/
 
 //remove active class 

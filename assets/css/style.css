@@ -125,6 +125,7 @@
     .section {
       padding-top: var(--header-height);
       margin-top: var(--header-height);
+      height: 100vh;
       
     }
     .section-tittle{
@@ -632,7 +633,7 @@
       width: 100%;
       margin: 0 1rem;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }
     .customize-theme .choose-size span{
@@ -643,6 +644,9 @@
       cursor: pointer;
     }
     .customize-theme .choose-size span.active{
+      background: var(--color-primary);
+    }
+    .customize-theme .color{
       margin-top: var(--m-2);
     }
     .customize-theme .choose-color{
@@ -737,6 +741,9 @@
       .customize-theme .card{
         width: 58vw;
       }
+      section#project {
+        margin-top: 15rem;
+      }
     }
     @media only screen and (max-width:768px)
     {
@@ -791,7 +798,7 @@
         max-width: 50%;
       }
       .contact-data,
-      .about-content .about-text{
+      .about-content{
         margin-bottom: var(--m-2-5);
       }
       .portfolio-item-inner{
@@ -814,10 +821,20 @@
       .skills__img{
         width: 40px;    
       }
+
+      .section{
+        padding-top: 0;
+        margin-top: 0;
+        
+      }
+      section#project {
+        margin-top: 20rem;
+      }
     }
     @media only screen and (max-width:320px)
     {
       .skills__img{
         width: 40px;    
       }
+
     }
