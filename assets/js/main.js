@@ -210,3 +210,19 @@ bg3.addEventListener('click',() => {
 })
 
 
+// CONTACT INPUT
+let inputs = document.querySelectorAll('.contact-input');
+
+inputs.forEach(input => {
+  input.addEventListener('input', () => {
+    if(input.value) {
+      input.classList.add('has-value');
+    } else {
+      input.classList.remove('has-value');
+    }
+  });
+});
+
+window.onload = function() {
+    document.querySelector('.contact-form').reset();
+}

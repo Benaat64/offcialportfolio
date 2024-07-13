@@ -587,6 +587,12 @@
       z-index: 10;
       color: var(--color-primary);;
     }
+    .contact-input.has-value + .contact-label{
+      top: -.75rem;
+      left: 0;
+      z-index: 10;
+      color: var(--color-primary);
+    }
     /*========== Footer ==========*/
     .footer{
       padding: 60px 0;
